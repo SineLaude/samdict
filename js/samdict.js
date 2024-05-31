@@ -170,12 +170,12 @@ function showQR() {
 		qrcode.makeCode(document.location.href);
 	}
 
-	$("#logo_link").hide();
+	$("#logo").hide();
 	$("#qrcode").css("display", "inline-block");
 }
 
 function hideQR() {
 	$("#qrcode").hide();
-	$("#logo_link").show();
+	$("#logo").show();
 	qrcode.clear();
 }
