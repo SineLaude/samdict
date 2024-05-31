@@ -6,7 +6,7 @@ This is a user-friendly frontend to Sambahsa dictionary data. Sambahsa is an int
 
 ## Licensing
 
-Note that the dictionary files included in the `data` directory are used with kind permission from Sambahsa's creator and are not covered by the `LICENSE` file.
+Note that the contents of the `data` and `img` directories are not covered by this repository's global `LICENSE` file. See those directories for separate licensing information.
 
 ## Libraries Used
 
