@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>SamDict</title>
+		<meta name="description" content="A multilingual Sambahsa dictionary.">
+		<meta property="og:title" content="Sambahsa Dictionary">
+		<meta property="og:site_name" content="SamDict">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="A multilingual Sambahsa dictionary.">
+		<meta property="og:url" content="https://sinelaude.github.io/samdict/">
+		<meta property="og:image" content="https://sinelaude.github.io/samdict/img/favicon.ico">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="js/samdict.js"></script>
+
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css" integrity="sha512-Hp+WwK4QdKZk9/W0ViDvLunYjFrGJmNDt6sCflZNkjgvNq9mY+0tMbd6tWMiAlcf1OQyqL4gn2rYp7UsfssZPA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<a href="http://sambahsa.pbworks.com/w/page/10183084/FrontPage" id="logo_link"><img src="img/sambahsa.png" id="logo" alt="Sambahsa logo"></a>
+
+		<select name="dictselector" id="dictselector">
+			<option value="en">Sambahsa &ndash; English</option>
+			<option value="fr">Sambahsa &ndash; Français</option>
+			<option value="es">Sambahsa &ndash; Español</option>
+			<option value="pt">Sambahsa &ndash; Português</option>
+		</select>
+			
+		<input type="text" id="searchfield" autocomplete="off" value="">
+		<button onclick="doSearch(true)" id="searchbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+		<div id="info">Use asterisk (*) as wildcard character.</div>
+		<input type="checkbox" id="highlight_term" checked><label for="highlight_term"> Highlight search term in results</label><br>
+		<input type="checkbox" id="search_sam" checked><label for="search_sam"> Search in Sambahsa</label>
+		<input type="checkbox" id="search_nat" checked><label for="search_nat"> Search in <span class="natlang_lower">English</span></label>
+
+		<div id="noresults">No results</div>
+
+		<table class="results_table" id="results_sam">
+			<tr><th colspan="2">Sambahsa &ShortRightArrow; <span class="natlang">English</span></th></tr>
+			<tr><td></td><td></td></tr>
+		</table>
+		<table class="results_table" id="results_nat">
+			<tr><th colspan="2"><span class="natlang">English</span> &ShortRightArrow; Sambahsa</th></tr>
+			<tr><td></td><td></td></tr>
+		</table>
+	</body>
+</html>
