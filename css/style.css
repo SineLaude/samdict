@@ -5,6 +5,29 @@ body {
 	color: black;
 }
 
+#top_links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#top_links li {
+	display: inline-block;
+	font-size: small;
+	color: #502d17;
+}
+
+#top_links a {
+	color: #502d17;
+	text-decoration: none;
+}
+
+#top_links a:hover {
+	color: #704d37;
+	cursor: pointer;
+}
+
 #logo {
 	width: 150px;
 	border: 5px solid #502d17;
@@ -15,6 +38,12 @@ body {
 #logo_link {
 	margin: 32px auto 15px auto;
 	display: inline-block;
+}
+
+#qrcode {
+	margin: 32px auto 15px auto;
+	border: 5px solid transparent;
+	display: none;
 }
 
 .results_table {
@@ -116,5 +145,8 @@ body {
 	}
 	#logo_link {
 		margin: 16px auto 0px auto;
+	}
+	.qrcontrols {
+		display: none !important;
 	}
 }

@@ -13,6 +13,7 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="js/samdict.js"></script>
 
 		<link rel="stylesheet" href="css/style.css">
@@ -23,7 +24,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<a href="http://sambahsa.pbworks.com/w/page/10183084/FrontPage" id="logo_link"><img src="img/sambahsa.png" id="logo" alt="Sambahsa logo"></a>
+		<ul id="top_links">
+			<li><a href="http://sambahsa.pbworks.com/w/page/10183084/FrontPage">Official Sambahsa Website</a></li>
+			<li>&centerdot;</li>
+			<li><a href="https://github.com/SineLaude/samdict">GitHub</a></li>
+			<li class="qrcontrols">&centerdot;</li>
+			<li class="qrcontrols"><a onclick="showQR()">Show QR code</a></li>
+		</ul>
+		<div id="qrcode" onclick="hideQR()"></div>
+		<a href="http://sambahsa.pbworks.com/w/page/10183084/FrontPage" id="logo_link">
+			<img src="img/sambahsa.png" id="logo" alt="Sambahsa logo">
+		</a>
 
 		<select name="dictselector" id="dictselector">
 			<option value="en">Sambahsa &ndash; English</option>

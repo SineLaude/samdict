@@ -13,3 +13,4 @@ Note that the contents of the `data` and `img` directories are not covered by th
 - JQuery (MIT license): https://github.com/jquery/jquery
 - PapaParse (MIT license): https://github.com/mholt/PapaParse
 - Font Awesome (MIT license): https://github.com/FortAwesome/Font-Awesome
+- QRCode.js (MIT license): https://github.com/davidshimjs/qrcodejs

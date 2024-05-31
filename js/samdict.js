@@ -1,4 +1,4 @@
-let dictionary, language, re;
+let dictionary, language, re, qrcode;
 const tables = ["#results_sam", "#results_nat"];
 const languages = {
 	en:	["English",	"English"],
@@ -104,6 +104,9 @@ function doSearch(history) {
 	$(".results_table").hide();
 	$("#noresults").hide();
 
+	if(qrcode)
+		hideQR();
+
 	if(history)
 		pushHistory();
 
@@ -151,4 +154,28 @@ function doSearch(history) {
 	}
 	else
 		$(document).prop("title", "SamDict");
+}
+
+function showQR() {
+	if(!qrcode) {
+		qrcode = new QRCode(document.getElementById("qrcode"), {
+			text: document.location.href,
+			width: 150,
+			height: 150,
+			colorDark: "#502d17",
+			colorLight: "#ddcfb4"
+		});
+	}
+	else {
+		qrcode.makeCode(document.location.href);
+	}
+
+	$("#logo_link").hide();
+	$("#qrcode").css("display", "inline-block");
+}
+
+function hideQR() {
+	$("#qrcode").hide();
+	$("#logo_link").show();
+	qrcode.clear();
 }
