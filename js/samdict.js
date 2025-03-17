@@ -47,7 +47,7 @@ $(document).ready(function() {
 	if(sp.has("d") && sp.get("d") in languages)
 		language = sp.get("d");
 	else
-		language = localStorage.getItem("language");
+		language = localStorage.getItem("sm_language");
 
 	if(!language)
 		language = "en";
@@ -72,7 +72,7 @@ function loadDict(lang, history) {
 			$(".natlang_lower").text(languages[language][1]);
 			$("#dictselector").val(language);
 
-			localStorage.setItem("language", language);
+			localStorage.setItem("sm_language", language);
 
 			doSearch(false);
 		}
